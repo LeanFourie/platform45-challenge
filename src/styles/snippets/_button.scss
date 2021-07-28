@@ -1,0 +1,173 @@
+.button {
+    @include transition($transitionFast);
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 16px 20px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    color: $successColor;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    font-variation-settings: 'wght' 500;
+    letter-spacing: .6px;
+    z-index: 2;
+    cursor: pointer;
+
+    // Layouts
+    &--icon {
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    // Children
+    &__icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            *[stroke] {
+                stroke: $successColor;
+                stroke-width: 2px;
+            }
+        }
+    }
+
+    // Layouts
+    &--icon-left {
+        flex-direction: row-reverse;
+
+        .button__label {
+            margin-right: 0px;
+            margin-left: 8px;
+        }
+    }
+
+    &--icon {
+        .button__label {
+            margin-right: 8px;
+        }
+    }
+
+    // Colors
+    &--primary {
+        background: $successColor;
+        color: $whiteColor;
+
+        .button__icon {
+            *[stroke] {
+                stroke: $whiteColor;
+            }
+        }
+    }
+
+    &--secondary {
+        background: $greyColor-lighter;
+        color:  $greyColor-dark;
+
+        .button__icon {
+            *[stroke] {
+                stroke: $greyColor-dark;
+            }
+        }
+    }
+
+    &--tertiary {
+        background: $primaryColor-darker;
+        color:  $secondaryColor;
+
+        .button__icon {
+            *[stroke] {
+                stroke: $secondaryColor;
+            }
+        }
+    }
+
+    &--success {
+        background: $successColor;
+        color: $whiteColor;
+
+        .button__icon {
+            *[stroke] {
+                stroke: $whiteColor;
+            }
+        }
+    }
+
+    &--warning {
+        background: $warningColor;
+        color: $whiteColor;
+
+        .button__icon {
+            *[stroke] {
+                stroke: $whiteColor;
+            }
+        }
+    }
+
+    &--danger {
+        background: $dangerColor;
+        color: $whiteColor;
+
+        .button__icon {
+            *[stroke] {
+                stroke: $whiteColor;
+            }
+        }
+    }
+
+    // States
+    &--disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+        background: $greyColor-light;
+        color: $greyColor;
+    }
+
+    &:hover {
+        // @include transform(translate(1px, -1px));
+        background: $successColor;
+        color: $whiteColor;
+        box-shadow: 0 6px 16px rgba($blackColor, .1);
+    
+        .button__icon {
+            *[stroke] {
+                stroke:  $whiteColor;
+            }
+        }
+
+        // Colors
+        &.button--primary {
+            background: $successColor-dark;
+        }
+    
+        &.button--secondary {
+            background: $greyColor-dark;
+        }
+    
+        &.button--tertiary {
+            background: $primaryColor-dark;
+        }
+    
+        &.button--success {
+            background: $successColor-dark;
+        }
+    
+        &.button--warning {
+            background: $warningColor-dark;
+        }
+    
+        &.button--danger {
+            background: $dangerColor-dark;
+        }
+    }
+}

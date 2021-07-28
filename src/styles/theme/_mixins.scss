@@ -1,0 +1,138 @@
+@mixin transition($property) {
+    transition: $property;
+    -webkit-transition: $property;
+    -o-transition: $property;
+}
+
+@mixin transform($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -o-transform: $property;
+}
+
+@mixin animation($property, $delay, $duration, $count) {
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $property;
+    animation-fill-mode: both;
+    animation-iteration-count: $count;
+}
+
+@mixin animation-pulse($name, $color, $size) {
+    @keyframes #{ $name } {
+        0% {
+            -moz-box-shadow: 0 0 0 0 rgba($color, 0.6);
+            box-shadow: 0 0 0 0 rgba($color, 0.6);
+        }
+        70% {
+            -moz-box-shadow: 0 0 0 $size rgba($color, 0);
+            box-shadow: 0 0 0 $size rgba($color, 0);
+        }
+        100% {
+            -moz-box-shadow: 0 0 0 0 rgba($color, 0);
+            box-shadow: 0 0 0 0 rgba($color, 0);
+        }
+    }
+
+    @-webkit-keyframes #{ $name } {
+        0% {
+            -webkit-box-shadow: 0 0 0 0 rgba($color, 0.6);
+        }
+        70% {
+            -webkit-box-shadow: 0 0 0 $size rgba($color, 0);
+        }
+        100% {
+            -webkit-box-shadow: 0 0 0 0 rgba($color, 0);
+        }
+    }
+  }
+
+/*** Responsive Queries ***/
+@mixin media-lt-1600 {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
+}
+@mixin media-lt-1500 {
+    @media screen and (max-width: 1500px) {
+        @content;
+    }
+}
+
+@mixin media-lt-1400 {
+    @media screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin media-lt-1300 {
+    @media screen and (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin media-lt-1250 {
+    @media screen and (max-width: 1250px) {
+        @content;
+    }
+}
+
+@mixin media-lt-1200 {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-lt-1100 {
+    @media screen and (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin media-lt-1000 {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin media-lt-900 {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin media-lt-750 {
+    @media screen and (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin media-lt-700 {
+    @media screen and (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin media-lt-600 {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin media-lt-500 {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin media-lt-400 {
+    @media screen and (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin media-lt-380 {
+    @media screen and (max-width: 380px) {
+        @content;
+    }
+}

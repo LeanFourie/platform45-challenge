@@ -1,0 +1,92 @@
+.radio-list {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 60px;
+    
+    @include media-lt-900 {
+        grid-gap: unset;
+        grid-row-gap: 22px;
+        grid-column-gap: 60px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        .item__input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+
+            &:checked + .item__icon {
+                background: $successColor;
+    
+                .icon__element {
+                    *[fill] {
+                        &:not([fill="none"]) {
+                            fill: $whiteColor;
+                        }
+                    }
+
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+
+            &:checked + .item__icon + .item__label {
+                color: $primaryColor-darker;
+            }
+        }
+
+        .item__icon {
+            @include transition($transitionFast);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 12px 0 0;
+            padding: 10px;
+            background: rgba($greyColor-lighter, .6);
+
+            .icon__element {
+                *[fill] {
+                    &:not([fill="none"]) {
+                        fill: $greyColor-light;
+                    }
+                }
+
+                *[stroke] {
+                    stroke: $greyColor-light;
+                }
+            }
+        }
+
+        .item__label {
+            @include transition($transitionFast);
+            color: $greyColor-light;
+        }
+
+        &:hover {
+            .item__icon {
+                background: $greyColor-light;
+    
+                .icon__element {
+                    *[fill] {
+                        &:not([fill="none"]) {
+                            fill: $whiteColor;
+                        }
+                    }
+
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+}

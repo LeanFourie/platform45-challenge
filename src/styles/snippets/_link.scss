@@ -1,0 +1,47 @@
+.link {
+    @include transition($transitionFast);
+    position: relative;
+    padding: 0 0 2px;
+    color: $primaryColor-darker;
+    letter-spacing: .4px;
+    font-size: 14px;
+    font-weight: 600;
+    font-variation-settings: 'wght' 600;
+
+    &::before,
+    &:after {
+        @include transition($transitionFast);
+        content: '';
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &::before {
+        width: 100%;
+        right: 0;
+        background: $primaryColor-darker;
+        transition-delay: .2s;
+    }
+
+    &::after {
+        width: 0;
+        left: 0;
+        background: $secondaryColor-light;
+        transition-delay: 0s;
+    }
+
+    &:hover {
+        color: $secondaryColor-light;
+
+        &::before {
+            width: 0;
+            transition-delay: 0s;
+        }
+    
+        &::after {
+            width: 100%;
+            transition-delay: .2s;
+        }
+    }
+}

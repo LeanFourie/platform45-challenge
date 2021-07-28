@@ -1,0 +1,101 @@
+.input {
+    @include transition($transitionFast);
+    position: relative;
+
+    // Children
+    &__label {
+        display: inline-block;
+        margin: 0 0 4px;
+    }
+
+    &__icon {
+        @include transform(translateY(-50%));
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        z-index: -1;
+    }
+
+    &__element {
+        @include transition($transitionFast);
+        width: 100%;
+        padding: 12px 20px;
+        background: rgba($greyColor-lighter, .4);
+        border: 1px solid transparent;
+        border-radius: 6px;
+        line-height: 1.6;
+        color: $primaryColor-darker;
+        font-size: 14px;
+        font-weight: 500;
+        font-variation-settings: 'wght' 500;
+        box-shadow: none;
+        outline: none;
+        
+        &::placeholder {
+            opacity: .4;
+            font-variation-settings: 'wght' 400;
+            font-weight: 400;
+            letter-spacing: .6px;
+        }
+
+        // States
+        &:focus {
+            background: rgba($greyColor-lighter, .2);
+            border-color: rgba($greyColor-light, .8);
+        }
+
+        // Types
+        &[type="date"] {
+            &::-webkit-datetime-edit-text {
+                color: $primaryColor-darker;
+                opacity: .4;
+            }
+            &::-webkit-datetime-edit-month-field {
+                color: $primaryColor-darker;
+                opacity: .4;
+            }
+            &::-webkit-datetime-edit-day-field {
+                color: $primaryColor-darker;
+                opacity: .4;
+            }
+            &::-webkit-datetime-edit-year-field {
+                color: $primaryColor-darker;
+                opacity: .4;
+            }
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
+            &::-webkit-calendar-picker-indicator {
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+
+        &--has-value {
+            &[type="date"] {
+                &::-webkit-datetime-edit-text {
+                    opacity: 1;
+                }
+                &::-webkit-datetime-edit-month-field {
+                    opacity: 1;
+                }
+                &::-webkit-datetime-edit-day-field {
+                    opacity: 1;
+                }
+                &::-webkit-datetime-edit-year-field {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    // Types
+    &--password {
+        .input__element {
+            letter-spacing: 3px;
+        }
+    }
+}

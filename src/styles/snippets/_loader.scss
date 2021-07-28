@@ -1,0 +1,39 @@
+.loader {
+    @include transform(translate(-50%, -50%));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .loader__circles {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 6px;
+        align-items: center;
+        justify-content: center;
+
+        .circles__item {
+            width: $loading-width-small;
+            height: $loading-width-small;
+            display: inline-block;
+            background: $greyColor;
+            border-radius: 50%;
+            animation: loading 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+
+            &--2 {
+                animation-delay: 0.1s;
+            }
+
+            &--3 {
+                animation-delay: 0.2s;
+            }
+        }
+    }
+
+    .loader__label {
+        margin: 6px 0 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-variation-settings: 'wght' 600;
+    }
+}

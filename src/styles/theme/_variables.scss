@@ -1,0 +1,146 @@
+/****** Colors ******/
+// Primary Color
+$primaryColor-100:          #FFE9D4;
+$primaryColor-200:          #FFD3AA;
+$primaryColor-300:          #FFBE7F;
+$primaryColor-400:          #FFA855;
+$primaryColor-500:          #FF922A;
+$primaryColor-600:          #CC7522;
+$primaryColor-700:          #995819;
+$primaryColor-800:          #663A11;
+$primaryColor-900:          #331D08;
+$primaryColor-lighter:      $primaryColor-100;
+$primaryColor-light:        $primaryColor-300;
+$primaryColor:              $primaryColor-500;
+$primaryColor-dark:         $primaryColor-700;
+$primaryColor-darker:       $primaryColor-900;
+
+// Secondary Color
+$secondaryColor-100:        #FFF6D7;
+$secondaryColor-200:        #FFEEAF;
+$secondaryColor-300:        #FFE686;
+$secondaryColor-400:        #FFDE5E;
+$secondaryColor-500:        #FFD536;
+$secondaryColor-600:        #CCAB2B;
+$secondaryColor-700:        #998020;
+$secondaryColor-800:        #665516;
+$secondaryColor-900:        #332A0B;
+$secondaryColor-lighter:    $secondaryColor-100;
+$secondaryColor-light:      $secondaryColor-300;
+$secondaryColor:            $secondaryColor-500;
+$secondaryColor-dark:       $secondaryColor-700;
+$secondaryColor-darker:     $secondaryColor-900;
+
+// Tertiary Color
+$tertiaryColor-100:         #F4E9D3;
+$tertiaryColor-200:         #E8D4A7;
+$tertiaryColor-300:         #DEBF7C;
+$tertiaryColor-400:         #D2AA50;
+$tertiaryColor-500:         #C79409;
+$tertiaryColor-600:         #9F771D;
+$tertiaryColor-700:         #785916;
+$tertiaryColor-800:         #4F3B0E;
+$tertiaryColor-900:         #281D07;
+$tertiaryColor-lighter:     $tertiaryColor-100;
+$tertiaryColor-light:       $tertiaryColor-300;
+$tertiaryColor:             $tertiaryColor-500;
+$tertiaryColor-dark:        $tertiaryColor-700;
+$tertiaryColor-darker:      $tertiaryColor-900;
+
+// Info
+$infoColor-100:             #CFE7EF;
+$infoColor-200:             #A0D0E0;
+$infoColor-300:             #70B9D1;
+$infoColor-400:             #41A2C2;
+$infoColor-500:             #118AB2;
+$infoColor-600:             #0E6F8F;
+$infoColor-700:             #0A536B;
+$infoColor-800:             #073747;
+$infoColor-900:             #031B23;
+$infoColor-lighter:         $infoColor-100;
+$infoColor-light:           $infoColor-300;
+$infoColor:                 $infoColor-500;
+$infoColor-dark:            $infoColor-700;
+$infoColor-darker:          $infoColor-900;
+
+// Success
+$successColor-100:          #DFFAF3;
+$successColor-200:          #BFF5E7;
+$successColor-300:          #A0F0DD;
+$successColor-400:          #80EBD1;
+$successColor-500:          #60E6C5;
+$successColor-600:          #4DB89E;
+$successColor-700:          #3A8A77;
+$successColor-800:          #265C4E;
+$successColor-900:          #132E27;
+$successColor-lighter:      $successColor-100;
+$successColor-light:        $successColor-300;
+$successColor:              $successColor-500;
+$successColor-dark:         $successColor-700;
+$successColor-darker:       $successColor-900;
+
+// Warning
+$warningColor-100:          #FFF6D7;
+$warningColor-200:          #FFEEAF;
+$warningColor-300:          #FFE686;
+$warningColor-400:          #FFDE5E;
+$warningColor-500:          #FFD536;
+$warningColor-600:          #CCAB2B;
+$warningColor-700:          #998020;
+$warningColor-800:          #665516;
+$warningColor-900:          #332A0B;
+$warningColor-lighter:      $warningColor-100;
+$warningColor-light:        $warningColor-300;
+$warningColor:              $warningColor-500;
+$warningColor-dark:         $warningColor-700;
+$warningColor-darker:       $warningColor-900;
+
+// Danger
+$dangerColor-100:           #FFE9D4;
+$dangerColor-200:           #FFD3AA;
+$dangerColor-300:           #FFBE7F;
+$dangerColor-400:           #FFA855;
+$dangerColor-500:           #FF922A;
+$dangerColor-600:           #CC7522;
+$dangerColor-700:           #995819;
+$dangerColor-800:           #663A11;
+$dangerColor-900:           #331D08;
+$dangerColor-lighter:       $dangerColor-100;
+$dangerColor-light:         $dangerColor-300;
+$dangerColor:               $dangerColor-500;
+$dangerColor-dark:          $dangerColor-700;
+$dangerColor-darker:        $dangerColor-900;
+
+// Grey
+$greyColor-100:             #E7E7E7;
+$greyColor-200:             #CFCFCF;
+$greyColor-300:             #B8B8B8;
+$greyColor-400:             #A0A0A0;
+$greyColor-500:             #888888;
+$greyColor-600:             #6D6D6D;
+$greyColor-700:             #525252;
+$greyColor-800:             #363636;
+$greyColor-900:             #1B1B1B;
+$greyColor-lighter:         $greyColor-100;
+$greyColor-light:           $greyColor-300;
+$greyColor:                 $greyColor-500;
+$greyColor-dark:            $greyColor-700;
+$greyColor-darker:          $greyColor-900;
+
+// Neutral
+$whiteColor:                #fff;
+$blackColor:                #000;
+
+
+/****** FONTS ******/
+$primaryFontFamily:         'Poppins', 'Inter', -apple-system,
+                            BlinkMacSystemFont, 'Segoe UI',
+                            Roboto, Oxygen, Ubuntu,
+                            Cantarell, 'Open Sans',
+                            'Helvetica Neue', sans-serif;
+
+
+/****** TRANSITIONS ******/
+$transitionFast:            all .26s ease;
+$transitionMedium:          all .64s ease;
+$transitionSlow:            all 1s ease;

@@ -1,0 +1,53 @@
+.page {
+    &--home {
+        .section {
+            &--hero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 10%;
+                background: $secondaryColor;
+    
+                @include media-lt-900 {
+                    min-height: 100vh;
+                }
+
+                .image {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .text {
+                    margin: 70px 0 50px;
+
+                    &__element {
+                        text-align: center;
+
+                        &--title {
+                            margin: 0 0 12px;
+                        }
+                    }
+                }
+
+                .actions {
+                    .button {
+                        &__icon {
+                            @include transform(rotate(180deg));
+                            margin: 0 2px 0 -2px;
+    
+                            @include media-lt-900 {
+                                @include transform(rotate(90deg));
+                                margin: 0;
+                            }
+                        }
+
+                        &--rotate {
+                            @include transform(rotate(180deg));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
